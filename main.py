@@ -1,6 +1,5 @@
 from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-from data_vis import visualize 
+from data_vis import visualize
 import getpass
 import csv
 import json
