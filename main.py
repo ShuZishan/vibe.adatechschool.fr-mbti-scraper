@@ -66,10 +66,15 @@ def update_db():
         f.close()
 
 def main():
-    if "--update" in sys.argv:
+    if "--help" in sys.argv or '-h' in sys.argv:
+        print(f"Usage: {sys.argv[0]} [-u | --update]")
+    elif "--update" in sys.argv or '-u' in sys.argv:
         update_db()
     visualize()
 
 
 if __name__=='__main__':
-    main()
+    try:
+        main()
+    except:
+        sys.exit(1)
